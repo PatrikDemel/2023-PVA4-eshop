@@ -5,9 +5,12 @@ https://www.figma.com/file/D9yE4krSRQvlyoAntt86DM/iWave_eshop_demo?type=design&n
 
 ## Stránky
 
-- Index
+- Home
+- Products
+- Contact
 - User
-- Cart
+--User login
+-- User register
 
 ### Index
 
