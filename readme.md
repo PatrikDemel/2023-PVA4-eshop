@@ -1,5 +1,8 @@
 # Popis aplikace: Eshop
 
+## Ilustrační demo
+https://www.figma.com/file/D9yE4krSRQvlyoAntt86DM/iWave_eshop_demo?type=design&node-id=0%3A1&mode=design&t=HynLTKLcIaYcECSc-1
+
 ## Stránky
 
 - Index
