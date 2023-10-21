@@ -1,24 +1,35 @@
-# Popis aplikace: Eshop
+# iWave iPhone reseller: Popis aplikace - Eshop
 
 ## Stránky
-
-- Index
+- Home
+- Products
+- Product
+- Contact
 - User
+- User login
+- User register
 - Cart
 
-### Index
+## Home
+Hlavní stránka aplikace, kde je jednoduchý popis brandu, a tlačítko odkazující na stránku **products**.
 
-Hlavní stránka aplikace. Uživatel zde uvidí bannery o produktech, které budou brzy dostupné na eshopu, a také i o produktech, které už v eshopu jsou.
+## Products
+Seznam nejnovějších produktů přidaných do eshopu, a seznam všech produktů v eshopu. Uživatel bude mít možnost si všechny produkty filtrovat podle *modelu produktu*, *barvy*, nebo *úložiště*. Aby si produkt mohl uživatel koupit, musí být zaregistrovaný v systému a přihlášený.
 
-Na indexové stránce se bude také nacházet seznam produktů, které si může uživatel objednat.
-Pokud si nějaký produkt chce objednat, musí být **zaregistrovaný v systému** a **přihlášený**.
+## Product
+Uživatel bude zde přesměrován ve chvíli, kdy klikne na určitý produkt na stránce **products**. Zde má k dispozici galerii obrázků danného produktu, popis, cenu, změnu kvantity a možnost objednání.
 
-### User
+## Contact 
+Stránka, kde může uživatel kontaktovat brand. Formulář bude ošetřen před prázdnými vstupy, a před invalidními emaily.
 
-Pokud není uživatel přihlášený, nabídne se mu formulář k přihlášení. Pokud nemá účet, ke kterému by se přihlásil, dostane možnost se do systému zaregistrovat.
+## User
+Informace o uživateli - jako je *jméno a příjmení*, *email*, nebo *uživatelské jméno*. Uživatel bude mít možnost si změnit email nebo heslo, zároveň bude mít k dispozici seznam všech produktů, které si kdy na eshopu objednal. Pokud není uživatel přihlášený na web, bude automaticky přesměrovaný na stránku **user login**.
 
-Jakmile se přihlásí, uvidí své informace - jako je **jméno**, **příjmení**, a **email**.
+## User login
+Přihlašovací formulář k aplikaci. Uživatel bude mít možnost se zaregistrovat, pokud nemá vytvořený účet.
 
-### Cart
+## User register
+Registrovací formulář. Od uživatele bude vyžadováno *jméno a příjmení*, *email*, *heslo*, a *uživatelské jméno*.
 
-Zde se ukážou všechny produkty, které si uživatel objednal, a cenu, jakou bude platit. Bude mít zde i možnost upravit množství objednaných produktů.
+## Cart
+Přehled produktů, které si uživatel přidal do košíku. Pokud web zaregistruje, že uživatel není přihlášený, bude automaticky přesměrován na stránku **user login**.
