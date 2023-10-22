@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
       // Saves fields into database
       $sql = "INSERT INTO messages VALUES (NULL,'$name','$email','$message')";
+      $result = mysqli_query($conn, $sql);
       $sent_message = 'Your form has been sent. We will reach you as soon as possible.';
     }
   }
