@@ -4,7 +4,7 @@ $sent_message = '';
 $error_messages = '';
 
 // Connect database
-$conn = mysqli_connect("localhost", "root", "", "iWaveEshop") or die("Connection error" . mysqli_connect_error());
+$conn = mysqli_connect("localhost", "root", "", "iwaveeshop") or die("Connection error" . mysqli_connect_error());
 
 // Waits for form send
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <textarea name="message" class="form-input" cols="30" rows="10" placeholder="Message..."
             style="resize: none"></textarea>
           <input type="submit" class="button contact-button mt-4" value="Send" />
-          <p class="text-black mt-3">
+          <p class="text-black mt-3 text-sm-center text-lg-start">
             <?php echo $sent_message; ?>
           </p>
           <p class="text-danger">
