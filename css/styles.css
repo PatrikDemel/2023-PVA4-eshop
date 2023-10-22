@@ -15,6 +15,26 @@
   --secondary-color-lighter: #d4e4ec;
 }
 
+/* Scrollbar customization */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #1f3a47 #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1f3a47;
+  border-radius: 10px;
+  border: 2px solid #f0f0f0;
+}
+
 /* Utility classes */
 .colored-text {
   color: var(--secondary-color);
@@ -34,8 +54,10 @@
   }
 }
 
+/* ----------- Large screens ------------ */
 /* Navbar */
 @media screen and (width >= 992px) {
+  /* Navlink */
   .navlink {
     color: var(--dark-color);
     text-decoration: none;
@@ -72,9 +94,86 @@
   .navlinkicon:hover {
     color: var(--secondary-color);
   }
+
+  /* Heading 1 */
+  .heading-1 {
+    font-size: 4rem;
+    font-weight: bold;
+    width: 50%;
+    margin-top: 10rem;
+    cursor: default;
+  }
+
+  /* Main description */
+  .main-description {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 50%;
+    margin-bottom: 3rem;
+    cursor: default;
+  }
+
+  /* Background image */
+  .background-image-container {
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/background-image.png) center center/cover;
+  }
+
+  /* Button */
+  .button {
+    padding: 0.5rem 3rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 40px;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: all ease-in-out 0.2s;
+    display: inline-block;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+  }
+
+  .button:hover {
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+  }
+
+  /* Heading 2 */
+  .heading-2 {
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: default;
+    margin: 5rem 0 2rem 0;
+  }
+
+  /* Form input */
+  .form-input {
+    border: 3px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    transition: border ease-in-out 0.2s;
+    outline: none;
+    margin: 0.5rem 0;
+    position: relative;
+  }
+
+  .form-input:focus {
+    border: 3px solid var(--secondary-color);
+  }
+
+  .form-input::-webkit-scrollbar {
+    width: 0;
+  }
+
+  /* Particular CSS */
+  .contact-button {
+    width: 35%;
+  }
 }
 
+/* ----------- Small screens ------------ */
 @media screen and (max-width: 991px) {
+  /* Navbar */
   .navlink {
     color: var(--dark-color);
     text-decoration: none;
@@ -89,66 +188,35 @@
 
     transition: color ease-in-out 0.2s;
   }
-}
 
-/* Heading-1 */
-@media screen and (width >= 992px) {
-  .heading-1 {
-    font-size: 4rem;
-    font-weight: bold;
-    width: 50%;
-    margin-top: 10rem;
-  }
-}
-@media screen and (max-width: 991px) {
+  /* Heading 1 */
   .heading-1 {
     font-size: 4rem;
     font-weight: bold;
     width: 100%;
     text-align: center;
     margin-top: 5rem;
+    cursor: default;
   }
-}
 
-/* Main description */
-@media screen and (width >= 992px) {
-  .main-description {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    width: 50%;
-    margin-bottom: 3rem;
-  }
-}
-
-@media screen and (max-width: 991px) {
+  /* Main description */
   .main-description {
     font-size: 1.2rem;
     margin-top: 1rem;
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+    cursor: default;
   }
-}
 
-/* Background image */
-@media screen and (width >= 992px) {
-  .background-image-container {
-    width: 100vw;
-    height: 100vh;
-    background: url(../imgs/background-image.png) center center/cover;
-  }
-}
-
-@media screen and (max-width: 991px) {
+  /* Background image */
   .background-image-container {
     width: 100vw;
     height: 100vh;
     background: url(../imgs/background-image-md.svg) center center/cover;
   }
-}
 
-/* Button */
-@media screen and (width >= 992px) {
+  /* Button */
   .button {
     padding: 0.5rem 3rem;
     border: 3px solid var(--secondary-color);
@@ -157,27 +225,45 @@
     color: var(--dark-color);
     transition: all ease-in-out 0.2s;
     display: inline-block;
-  }
-
-  .button:hover {
-    color: var(--light-color);
-    background-color: var(--secondary-color);
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .button {
-    padding: 0.5rem 3rem;
-    border: 3px solid var(--secondary-color);
-    border-radius: 40px;
-    text-decoration: none;
     color: var(--dark-color);
-    transition: all ease-in-out 0.2s;
-    display: inline-block;
+    background-color: var(--light-color);
   }
 
   .button:hover {
     color: var(--light-color);
     background-color: var(--secondary-color);
+  }
+
+  /* Heading 2 */
+  .heading-2 {
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: default;
+    margin: 3rem 0 2rem 0;
+  }
+
+  /* Form input */
+  .form-input {
+    border: 3px solid var(--primary-color);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    transition: border ease-in-out 0.2s;
+    outline: none;
+    margin: 0.5rem 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .form-input:focus {
+    border: 3px solid var(--secondary-color);
+  }
+
+  .form-input::-webkit-scrollbar {
+    width: 0;
+  }
+
+  /* Particular CSS */
+  .contact-button {
+    width: 60%;
   }
 }
