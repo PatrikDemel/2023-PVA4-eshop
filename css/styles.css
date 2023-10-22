@@ -165,6 +165,11 @@
     width: 0;
   }
 
+  /* Contact image */
+  .contact-image {
+    display: block;
+  }
+
   /* Particular CSS */
   .contact-button {
     width: 35%;
@@ -260,6 +265,11 @@
 
   .form-input::-webkit-scrollbar {
     width: 0;
+  }
+
+  /* Contact image */
+  .contact-image {
+    display: none;
   }
 
   /* Particular CSS */
