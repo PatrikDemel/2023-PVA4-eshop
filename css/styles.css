@@ -109,7 +109,7 @@
     font-size: 1.2rem;
     margin-top: 1rem;
     width: 50%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     cursor: default;
   }
 
@@ -144,6 +144,7 @@
     font-weight: bold;
     cursor: default;
     margin: 5rem 0 2rem 0;
+    position: relative;
   }
 
   /* Form input */
