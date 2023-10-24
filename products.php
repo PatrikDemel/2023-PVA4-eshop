@@ -1,35 +1,3 @@
-<?php
-// Message variables
-$sent_message = '';
-$error_messages = '';
-
-// Connect database
-$conn = mysqli_connect("localhost", "root", "", "iwaveeshop") or die("Connection error" . mysqli_connect_error());
-
-// Waits for form send
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  // Saves fields into variables
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $message = $_POST['message'];
-
-  // Checks if any of the fields is empty
-  if (empty($name) || empty($email) || empty($message)) {
-    $error_messages = 'Error: all fields must not be empty';
-  } else {
-    // Checks if any of the fields is invalid
-    if (strlen($name) > 30 || strlen($email) > 255) {
-      $error_messages = 'Error: Some of your inputs are invalid.';
-    } else {
-      // Saves fields into database
-      $sql = "INSERT INTO messages VALUES (NULL,'$name','$email','$message')";
-      $result = mysqli_query($conn, $sql);
-      $sent_message = 'Your form has been sent. We will reach you as soon as possible.';
-    }
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <link rel="stylesheet" href="./css/styles.css" />
   <!-- Title and Icon -->
   <link rel="icon" href="./assets/favicon.svg" />
-  <title>iWave | Contact</title>
+  <title>iWave | Products</title>
 </head>
 
 <body>
@@ -73,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <a class="navlink" href="index.html">Home</a>
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
-              <a class="navlink" href="products.php">Products</a>
+              <a class="navlink" href="products.html">Products</a>
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
               <a class="navlink" href="contact.php">Contact</a>
@@ -87,31 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </div>
   </nav>
-  <!-- Contact section -->
-  <section class="container d-flex flex-sm-column flex-lg-row align-items-center-exsm align-items-sm-center">
-    <div class="col-lg-6 col-sm-10">
-      <div class="row">
-        <h2 class="heading-2">Contact us</h2>
-        <form action="contact.php" method="post"
-          class="d-flex flex-column align-items-sm-center align-items-lg-stretch">
-          <input type="text" name="name" class="form-input" placeholder="Name..." />
-          <input type="email" name="email" class="form-input" placeholder="Email..." />
-          <textarea name="message" class="form-input" cols="30" rows="10" placeholder="Message..."
-            style="resize: none"></textarea>
-          <input type="submit" class="button contact-button mt-4" value="Send" />
-          <p class="text-black mt-3 text-sm-center text-lg-start">
-            <?php echo $sent_message; ?>
-          </p>
-          <p class="text-danger">
-            <?php echo $error_messages; ?>
-          </p>
-        </form>
-      </div>
-    </div>
-    <div class="col-lg-6 col-sm-10">
-      <div class="row d-flex justify-content-end mt-5 pt-5">
-        <img src="./imgs/contact-image.svg" alt="ilustrační obrázek" class="contact-image w-75" />
-      </div>
+  <!-- Products section -->
+  <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
+    <!-- All products -->
+    <h2 class="heading-2">Products</h2>
+    <!-- Product filter -->
+
+    <!-- Product gallery -->
+    <div class="gallery d-flex gap-5 flex-wrap justify-content-center">
+
     </div>
   </section>
 </body>

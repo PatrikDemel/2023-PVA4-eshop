@@ -130,7 +130,7 @@
     transition: all ease-in-out 0.2s;
     display: inline-block;
     color: var(--dark-color);
-    background-color: var(--light-color);
+    background-color: transparent;
   }
 
   .button:hover {
@@ -169,6 +169,25 @@
   /* Contact image */
   .contact-image {
     display: block;
+  }
+
+  /* Product gallery */
+  .product-box {
+    width: 18rem;
+    background-color: rgb(238, 238, 238);
+    padding: 2rem;
+    border-radius: 25px;
+  }
+
+  .product-gallery-heading {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .product-gallery-price {
+    font-size: 1.2rem;
   }
 
   /* Particular CSS */
@@ -232,7 +251,7 @@
     transition: all ease-in-out 0.2s;
     display: inline-block;
     color: var(--dark-color);
-    background-color: var(--light-color);
+    background-color: transparent;
   }
 
   .button:hover {
@@ -271,6 +290,30 @@
   /* Contact image */
   .contact-image {
     display: none;
+  }
+
+  /* Products gallery */
+  .gallery {
+    justify-content: center;
+  }
+
+  /* Product gallery */
+  .product-box {
+    width: 10rem;
+    background-color: rgb(238, 238, 238);
+    padding: 2rem;
+    border-radius: 25px;
+  }
+
+  .product-gallery-heading {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .product-gallery-price {
+    font-size: 1.2rem;
   }
 
   /* Particular CSS */
