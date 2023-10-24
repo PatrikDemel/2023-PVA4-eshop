@@ -1,11 +1,5 @@
 <?php
-// Message variables
-$sent_message = '';
-$error_messages = '';
-
-// Connect database
-$conn = mysqli_connect("localhost", "root", "", "iwaveeshop") or die("Connection error" . mysqli_connect_error());
-
+include("db_setup.php");
 // Waits for form send
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Saves fields into variables

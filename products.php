@@ -60,10 +60,8 @@
     <!-- All products -->
     <h2 class="heading-2">Products</h2>
     <!-- Product filter -->
-
     <!-- Product gallery -->
     <div class="gallery d-flex gap-5 flex-wrap justify-content-center">
-
     </div>
   </section>
 </body>

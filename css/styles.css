@@ -190,6 +190,62 @@
     font-size: 1.2rem;
   }
 
+  /* User page */
+  .user-row {
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+    cursor: default;
+  }
+
+  .user-products-order-thead {
+    background-color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  /* Login page */
+  .login-background-image {
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/login-background.svg) center center/cover;
+  }
+
+  .login-form {
+    justify-content: center;
+  }
+
+  .login-form-row {
+    border: 3px solid var(--primary-color);
+    border-radius: 30px;
+    width: 50%;
+  }
+
+  .login-form-input {
+    border: none;
+    outline: none;
+    padding: 0.7rem 0 0 0.5rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+
+  .login-form-icon {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.3rem;
+    padding: 1rem 1rem 1rem 1.3rem;
+    border-radius: 19px 0 0 19px;
+  }
+
+  .login-button {
+    width: 20%;
+    text-align: center;
+    border-color: var(--primary-color);
+  }
+
+  .login-button:hover {
+    background-color: var(--primary-color);
+  }
+
   /* Particular CSS */
   .contact-button {
     width: 35%;
@@ -265,6 +321,7 @@
     font-weight: bold;
     cursor: default;
     margin: 3rem 0 2rem 0;
+    text-align: center;
   }
 
   /* Form input */
@@ -310,10 +367,68 @@
     font-size: 1.4rem;
     text-align: center;
     margin-top: 1rem;
+    text-align: center;
   }
 
   .product-gallery-price {
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* User page */
+  .user-row {
+    border-bottom: 1px solid var(--primary-color);
+    font-size: 1.2rem;
+    cursor: default;
+  }
+
+  .user-products-order-thead {
+    background-color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  /* Login page */
+  .login-background-image {
+    width: 100vw;
+    height: 100vh;
+    background: url(../imgs/login-background.svg) center center/cover;
+  }
+
+  .login-form {
+    justify-content: center;
+  }
+
+  .login-form-row {
+    border: 3px solid var(--primary-color);
+    border-radius: 30px;
+    width: 90%;
+  }
+
+  .login-form-input {
+    border: none;
+    outline: none;
+    padding: 0.7rem 0 0 0.5rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+  }
+
+  .login-form-icon {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.3rem;
+    padding: 1rem 1rem 1rem 1.3rem;
+    border-radius: 19px 0 0 19px;
+  }
+
+  .login-button {
+    width: 50%;
+    text-align: center;
+    border-color: var(--primary-color);
+  }
+
+  .login-button:hover {
+    background-color: var(--primary-color);
   }
 
   /* Particular CSS */
