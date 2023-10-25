@@ -60,7 +60,7 @@
     <!-- All products -->
     <h2 class="heading-2">Products</h2>
     <!-- Product gallery -->
-    <div class="gallery d-flex gap-5 flex-wrap justify-content-center">
+    <div class="gallery d-flex gap-5 flex-wrap justify-content-center pb-5">
       <!-- Product box -->
       <?php
       // Connects to the database
@@ -79,9 +79,11 @@
           $link = $row["link"];
 
           echo "<div class='product-box d-flex flex-column align-items-center flex-wrap '>
-          <img src='$image' alt='$name' class='w-75'>
+          <a href='$link' class='d-flex justify-content-center'>
+            <img src='$image' alt='$name' class='w-75'>
+          </a>
           <p class='product-gallery-heading'>$name</p>
-          <p class='product-gallery-price'>$$price</p>
+          <p class='product-gallery-price text-center'>$$price</p>
           <a href='$link' class='button'>Add to cart</a>
         </div>";
         }

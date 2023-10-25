@@ -119,6 +119,44 @@ if (!isset($_SESSION['username'])) {
         </div>
       </div>
     </div>
+    <div class="container pb-5">
+      <h2 class="heading-2">Ordered products</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+              Product image</th>
+            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+              Product name</th>
+            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+              Order number</th>
+            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+              Order status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+          $sql = "SELECT * FROM products WHERE user_ordered = '$username'";
+          $result = mysqli_query($conn, $sql);
+
+          while ($row = mysqli_fetch_array($result)) {
+            $image = $row["image"];
+            $name = $row["name"];
+            $order_number = $row["order_number"];
+            $order_status = $row["order_status"];
+
+            echo "dyk";
+          }
+          ?>
+          <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </section>
 </body>
 
