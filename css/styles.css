@@ -223,17 +223,18 @@
   .login-form-input {
     border: none;
     outline: none;
-    padding: 0.7rem 0 0 0.5rem;
     font-size: 1.2rem;
     background-color: transparent;
+    width: 100%;
+    padding-left: 1rem;
   }
 
   .login-form-icon {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-size: 1.3rem;
-    padding: 1rem 1rem 1rem 1.3rem;
     border-radius: 19px 0 0 19px;
+    padding: 1rem 1rem 1rem 1.3rem;
   }
 
   .login-button {
@@ -408,17 +409,18 @@
   .login-form-input {
     border: none;
     outline: none;
-    padding: 0.7rem 0 0 0.5rem;
     font-size: 1.2rem;
     background-color: transparent;
+    width: 100%;
+    padding-left: 1rem;
   }
 
   .login-form-icon {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-size: 1.3rem;
-    padding: 1rem 1rem 1rem 1.3rem;
     border-radius: 19px 0 0 19px;
+    padding: 1rem 1rem 1rem 1.3rem;
   }
 
   .login-button {

@@ -1,34 +1,31 @@
 <?php
-// Starts session
+// Gets username and password from session
 session_start();
-
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
 // Error message variable
 $message = '';
 
-// Checks if the user is logged in
-if (isset($_SESSION['username'])) {
-    header("Location: user.php");
-    exit;
-} else {
-    // Connects to the database
-    include_once('db_setup.php');
+// Connects to the database
+include_once("db_setup.php");
 
-    // Waits for form send
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $username_input = $_POST['username'];
-        $password_input = $_POST['password'];
+// Waits for form send
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $password_input = $_POST['password_input'];
+    $password_input_rp = $_POST['password_input_rp'];
 
-        $sql = "SELECT * FROM users WHERE username = '$username_input' AND password = '$password_input'";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_array($result);
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['password'] = $row['password'];
-            header("Location: user.php");
-            exit;
+    // Checks if the fields are empty
+    if (empty($password_input) || empty($password_input_rp)) {
+        $message = 'Error: all fields must not be empty';
+    } else {
+        // Checks if the passwords are same
+        if ($password_input != $password_input_rp) {
+            $message = 'Error: Your passwords do not match';
         } else {
-            $message = 'Error: wrong username or password';
+            // Rewrites the password
+            $sql = "UPDATE users SET password = '$password_input' WHERE username = '$username'";
+            $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+            header("Location: user.php");
         }
     }
 }
@@ -98,23 +95,22 @@ if (isset($_SESSION['username'])) {
         </nav>
         <!-- User login section -->
         <section class="container">
-            <h2 class="heading-2 text-center">Login user</h2>
+            <h2 class="heading-2 text-center">Change password</h2>
             <div class="container ">
-                <form action="login.php" method="post"
+                <form action="change_password.php" method="post"
                     class="login-form w-100 d-flex flex-column align-items-center mt-5 pt-3">
-                    <div class="login-form-row mb-4 mt-3 d-flex align-items-center">
-                        <i class="fa-regular fa-circle-user login-form-icon"></i>
-                        <input type="text" name="username" class="login-form-input w-100">
+                    <div class="login-form-row mb-4 mt-3 d-flex align-items-center p-2">
+                        <input type="password" name="password_input" class="login-form-input w-100"
+                            placeholder="New password...">
                     </div>
-                    <div class="login-form-row d-flex align-items-center">
-                        <i class="fa-solid fa-lock login-form-icon"></i>
-                        <input type="password" name="password" class="login-form-input w-100">
+                    <div class="login-form-row mb-4 mt-3 d-flex align-items-center p-2">
+                        <input type="password" name="password_input_rp" class="login-form-input w-100"
+                            placeholder="Repeat new password...">
                     </div>
-                    <p class="text-danger text-center mt-4">
+                    <p class="text-danger text-center mt-2">
                         <?php echo $message; ?>
                     </p>
-                    <input type="submit" class="button login-button mt-2" value="Log in">
-                    <p class="mt-3">Not a user? <a href="register.php" class="text-black">Register here</a>.</p>
+                    <input type="submit" class="button login-button mt-2" value="Change password">
                 </form>
             </div>
 

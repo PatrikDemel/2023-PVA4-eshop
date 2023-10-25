@@ -1,5 +1,11 @@
 <?php
+// Message variables
+$sent_message = '';
+$error_messages = '';
+
+// Connects to the database
 include("db_setup.php");
+
 // Waits for form send
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Saves fields into variables
@@ -73,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <a class="navlink" href="contact.php">Contact</a>
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
-              <a class="navlinkicon" href="user.html"><i class="fa-regular fa-circle-user navlink-icon"></i></a>
+              <a class="navlinkicon" href="user.php"><i class="fa-regular fa-circle-user navlink-icon"></i></a>
               <a class="navlinkicon" href="cart.html"><i class="fa-solid fa-cart-shopping navlink-icon"></i></a>
             </li>
           </ul>

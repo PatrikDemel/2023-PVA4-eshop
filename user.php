@@ -1,3 +1,25 @@
+<?php
+// Starts session
+session_start();
+
+// Checks if the user is logged in
+if (!isset($_SESSION['username'])) {
+  header("Location: login.php");
+  exit;
+} else {
+  //Connects to the database
+  include_once("db_setup.php");
+
+  $username = $_SESSION['username'];
+  $password = $_SESSION['password'];
+
+  $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +41,8 @@
   <link rel="stylesheet" href="./css/styles.css" />
   <!-- Title and Icon -->
   <link rel="icon" href="./assets/favicon.svg" />
-  <title>iWave |
-    <?php echo $username; ?> info
+  <title>iWave | User
+    <?php echo $username; ?>
   </title>
 </head>
 
@@ -65,88 +87,37 @@
       <div class="col-lg-6 col-sm-12 flex-column">
         <div class="row user-row d-flex flex-row my-4">
           <p class="my-0 py-2 px-0">
-            <span class="fw-bold">First name: </span>firstname
+            <span class="fw-bold">First name: </span>
+            <?php echo $row['first_name']; ?>
           </p>
         </div>
         <div class="row user-row d-flex flex-row my-4">
           <p class="my-0 py-2 px-0">
-            <span class="fw-bold">Last name: </span>lastname
+            <span class="fw-bold">Last name: </span>
+            <?php echo $row['last_name']; ?>
           </p>
         </div>
         <div class="row user-row d-flex flex-row my-4">
           <p class="my-0 py-1 px-0">
-            <span class="fw-bold">Email: </span>email
+            <span class="fw-bold">Email: </span>
+            <?php echo $row['email']; ?>
           </p>
         </div>
         <div class="row user-row d-flex flex-row my-4">
           <p class="my-0 py-2 px-0">
-            <span class="fw-bold">Username: </span>username
+            <span class="fw-bold">Username: </span>
+            <?php echo $_SESSION['username']; ?>
           </p>
+        </div>
+        <div class="row user-row d-flex flex-row my-4">
+          <p class="my-0 py-2 px-0"><a href="change_password.php" class="text-black">
+              Change password</a></p>
         </div>
         <div class="row user-row d-flex flex-row my-4">
           <p class="my-0 py-2 px-0"><a href="logout.php" class="text-black">
               Log out</a></p>
         </div>
       </div>
-    </div>
-    <!-- User products -->
-    <div class="container mx-0 px-0">
-      <h2 class="heading-2">Ordered products</h2>
-      <!-- Product table -->
-      <table class="table">
-        <thead>
-          <tr class="user-products-order-row">
-            <th scope="col" style="
-                  background-color: var(--primary-color);
-                  color: var(--light-color);
-                  font-weight: 400;
-                ">
-              Product image
-            </th>
-            <th scope="col" style="
-                  background-color: var(--primary-color);
-                  color: var(--light-color);
-                  font-weight: 400;
-                ">
-              Product name
-            </th>
-            <th scope="col" style="
-                  background-color: var(--primary-color);
-                  color: var(--light-color);
-                  font-weight: 400;
-                ">
-              Order number
-            </th>
-            <th scope="col" style="
-                  background-color: var(--primary-color);
-                  color: var(--light-color);
-                  font-weight: 400;
-                ">
-              Order status
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>image</td>
-            <td>iPhone 15 128GB black</td>
-            <td>2398972389</td>
-            <td>Ordered</td>
-          </tr>
-          <tr>
-            <td>image</td>
-            <td>iPhone 15 128GB pink</td>
-            <td>2398972389</td>
-            <td>Ordered</td>
-          </tr>
-          <tr>
-            <td>image</td>
-            <td>iPhone 15 128GB yellow</td>
-            <td>2398972389</td>
-            <td>Ordered</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 </body>
