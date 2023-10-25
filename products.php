@@ -59,9 +59,36 @@
   <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
     <!-- All products -->
     <h2 class="heading-2">Products</h2>
-    <!-- Product filter -->
     <!-- Product gallery -->
     <div class="gallery d-flex gap-5 flex-wrap justify-content-center">
+      <!-- Product box -->
+      <?php
+      // Connects to the database
+      include_once("db_setup.php");
+
+      // Selects all products
+      $sql = "SELECT * FROM products";
+      $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result) > 0) {
+        // Prints product
+        while ($row = mysqli_fetch_array($result)) {
+          $name = $row["name"];
+          $image = $row["image"];
+          $price = $row["price"];
+          $link = $row["link"];
+
+          echo "<div class='product-box d-flex flex-column align-items-center flex-wrap '>
+          <img src='$image' alt='$name' class='w-75'>
+          <p class='product-gallery-heading'>$name</p>
+          <p class='product-gallery-price'>$$price</p>
+          <a href='$link' class='button'>Add to cart</a>
+        </div>";
+        }
+      } else {
+        echo 'No items found in the database.';
+      }
+      ?>
     </div>
   </section>
 </body>
