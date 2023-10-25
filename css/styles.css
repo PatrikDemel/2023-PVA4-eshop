@@ -116,7 +116,7 @@
   /* Background image */
   .background-image-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: url(../imgs/background-image.png) center center/cover;
   }
 
@@ -277,7 +277,6 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
-    margin-top: 5rem;
     cursor: default;
   }
 
@@ -294,7 +293,7 @@
   /* Background image */
   .background-image-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background: url(../imgs/background-image-md.svg) center center/cover;
   }
 
@@ -436,5 +435,12 @@
   /* Particular CSS */
   .contact-button {
     width: 60%;
+  }
+}
+
+@media screen and (height < 800px) {
+  .heading-1 {
+    font-size: 3rem;
+    margin-top: 2em;
   }
 }
