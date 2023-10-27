@@ -72,7 +72,7 @@ if (!isset($_SESSION['username'])) {
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
               <a class="navlinkicon" href="user.php"><i class="fa-regular fa-circle-user navlink-icon"></i></a>
-              <a class="navlinkicon" href="cart.html"><i class="fa-solid fa-cart-shopping navlink-icon"></i></a>
+              <a class="navlinkicon" href="cart.php"><i class="fa-solid fa-cart-shopping navlink-icon"></i></a>
             </li>
           </ul>
         </div>
