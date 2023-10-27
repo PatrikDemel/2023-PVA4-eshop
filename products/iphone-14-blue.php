@@ -124,7 +124,6 @@ $description = $row['description'];
         // Attach the addToCart function to the button's click event
         addToCartButton.addEventListener('click', addToCart);
 
-        console.log(shoppingCart);
     </script>
 
 </body>
