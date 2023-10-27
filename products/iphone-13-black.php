@@ -104,7 +104,10 @@ $description = $row['description'];
             // Check if the product exists in the shopping cart
             if (shoppingCart.hasOwnProperty('iPhone12Black')) {
                 // If it exists, update the quantity
-                shoppingCart['iPhone12Black'].quantity++;
+                shoppingCart['iPhone12Black'].quantity++;¨
+
+                // Redirects user to the cart page
+                window.location.href = "../cart.php";
             } else {
                 // If it doesn't exist, create a new entry
                 shoppingCart['iPhone12Black'] = {
@@ -112,6 +115,9 @@ $description = $row['description'];
                     price: price,
                     quantity: 1
                 };
+
+                // Redirects user to the cart page
+                window.location.href = "../cart.php";
             }
 
             // Save the updated shopping cart back to local storage

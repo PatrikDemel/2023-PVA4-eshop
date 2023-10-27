@@ -105,6 +105,9 @@ $description = $row['description'];
             if (shoppingCart.hasOwnProperty('iPhone11Red')) {
                 // If it exists, update the quantity
                 shoppingCart['iPhone11Red'].quantity++;
+
+                // Redirects user to the cart page
+                window.location.href = "../cart.php";
             } else {
                 // If it doesn't exist, create a new entry
                 shoppingCart['iPhone11Red'] = {
@@ -112,6 +115,9 @@ $description = $row['description'];
                     price: price,
                     quantity: 1
                 };
+
+                // Redirects user to the cart page
+                window.location.href = "../cart.php";
             }
 
             // Save the updated shopping cart back to local storage
@@ -120,6 +126,7 @@ $description = $row['description'];
 
         // Add to cart button variable
         const addToCartButton = document.getElementById('add-button');
+
 
         // Attach the addToCart function to the button's click event
         addToCartButton.addEventListener('click', addToCart);

@@ -84,7 +84,7 @@
           </a>
           <p class='product-gallery-heading'>$name</p>
           <p class='product-gallery-price text-center'>$$price</p>
-          <a href='$link' class='button'>Add to cart</a>
+          <a href='$link' class='button'>Show details</a>
         </div>";
         }
       } else {
