@@ -1,10 +1,13 @@
 <?php
+// Connects to the database
 include_once("../db_setup.php");
 
+// SQL command execution
 $sql = "SELECT * FROM products WHERE id = '13'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 
+// DB data
 $name = $row['name'];
 $price = $row['price'];
 $image = $row['image'];
@@ -41,7 +44,7 @@ $description = $row['description'];
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container pt-2">
-            <a class="navbar-brand" href="index.html"><img src="../assets/logo.png" alt="logo" class="w-75" /></a>
+            <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="logo" class="w-75" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav">
                 <i class="navbar-toggler-icon"></i>
             </button>
@@ -76,20 +79,52 @@ $description = $row['description'];
     <!-- Main section -->
     <section
         class="container d-lg-flex d-sm-flex flex-sm-column align-items-center-exsm align-items-lg-start flex-lg-row align-items-sm-center mt-5 pt-5">
-        <div class="col-6">
-            <img src="../<?php echo $image; ?>" alt="<?php echo $name; ?>">
-        </div>
-        <div class="col-6">
-            <h2 class="heading-2">
-                <?php echo $name; ?>
-            </h2>
-            <p style="cursor: default;">
-                <?php echo $description; ?>
-            </p>
-            <a href="#" class="button mt-5">Add to card</a>
-        </div>
+        <!-- Product -->
+        <?php
+        echo "<div class='col-6'>
+        <img src='../$image' alt='$image'>
+    </div>
+    <div class='col-6'>
+        <h2 class='heading-2' id='name'>$name</h2>
+        <p>$description</p>
+        <p class='fw-bold mt-4 mb-5' style='font-size: 2rem;' id='price'>$$price</p>
+        <a href='#' class='button' id='add-button'>Add to cart</a>
+    </div>";
+        ?>
     </section>
-</body>
+    <script>
+        // Get the shopping cart object from local storage
+        const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
 
+        // Get the name and the price elements
+        const name = document.getElementById('name').textContent;
+        const price = parseFloat(document.getElementById('price').textContent.replace('$', ''));
+
+        function addToCart() {
+            // Check if the product exists in the shopping cart
+            if (shoppingCart.hasOwnProperty('iPhone12Black')) {
+                // If it exists, update the quantity
+                shoppingCart['iPhone12Black'].quantity++;
+            } else {
+                // If it doesn't exist, create a new entry
+                shoppingCart['iPhone12Black'] = {
+                    name: name,
+                    price: price,
+                    quantity: 1
+                };
+            }
+
+            // Save the updated shopping cart back to local storage
+            localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+        }
+
+        // Add to cart button variable
+        const addToCartButton = document.getElementById('add-button');
+
+        // Attach the addToCart function to the button's click event
+        addToCartButton.addEventListener('click', addToCart);
+    </script>
+
+</body>
 
 </html>
