@@ -41,7 +41,7 @@
               <a class="navlink" href="index.html">Home</a>
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
-              <a class="navlink" href="products.html">Products</a>
+              <a class="navlink" href="products.php">Products</a>
             </li>
             <li class="nav-item nav-item-mobile-margin mx-lg-4">
               <a class="navlink" href="contact.php">Contact</a>
@@ -78,13 +78,13 @@
           $price = $row["price"];
           $link = $row["link"];
 
-          echo "<div class='product-box d-flex flex-column align-items-center flex-wrap '>
+          echo "<div class='product-box d-flex flex-column align-items-center flex-lg-wrap '>
           <a href='$link' class='d-flex justify-content-center'>
             <img src='$image' alt='$name' class='w-75'>
           </a>
           <p class='product-gallery-heading'>$name</p>
           <p class='product-gallery-price text-center'>$$price</p>
-          <a href='$link' class='button'>Show details</a>
+          <a href='$link' class='button text-center'>Show details</a>
         </div>";
         }
       } else {

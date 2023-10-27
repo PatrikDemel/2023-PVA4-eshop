@@ -81,14 +81,14 @@ $description = $row['description'];
         class="container d-lg-flex d-sm-flex flex-sm-column align-items-center-exsm align-items-lg-start flex-lg-row align-items-sm-center mt-5 pt-5">
         <!-- Product -->
         <?php
-        echo "<div class='col-6'>
-        <img src='../$image' alt='$image'>
+        echo "<div class='col-lg-6 col-sm-12 d-flex flex-column align-items-center align-items-lg-start'>
+        <img src='../$image' alt='$image' class='product-image'>
     </div>
-    <div class='col-6'>
+    <div class='col-lg-6 col-sm-12 d-flex flex-column align-items-center align-items-lg-start'>
         <h2 class='heading-2' id='name'>$name</h2>
-        <p>$description</p>
+        <p class='text-center text-lg-start'>$description</p>
         <p class='fw-bold mt-4 mb-5' style='font-size: 2rem;' id='price'>$$price</p>
-        <a href='#' class='button' id='add-button'>Add to cart</a>
+        <a href='#' class='button mb-5' id='add-button'>Add to cart</a>
     </div>";
         ?>
     </section>

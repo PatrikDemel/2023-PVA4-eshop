@@ -280,6 +280,7 @@
     width: 100%;
     text-align: center;
     cursor: default;
+    margin-top: 5rem;
   }
 
   /* Main description */
@@ -289,6 +290,7 @@
     text-align: center;
     margin-bottom: 1rem;
     cursor: default;
+    padding: 0 2rem;
   }
 
   /* Background image */
@@ -301,7 +303,7 @@
   /* Button */
   .button {
     padding: 0.5rem 3rem;
-    border: 3px solid var(--secondary-color);
+    border: 3px solid var(--primary-color);
     border-radius: 40px;
     text-decoration: none;
     color: var(--dark-color);
@@ -313,7 +315,7 @@
 
   .button:hover {
     color: var(--light-color);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
   }
 
   /* Heading 2 */
@@ -357,7 +359,7 @@
 
   /* Product gallery */
   .product-box {
-    width: 10rem;
+    width: 15rem;
     background-color: rgb(238, 238, 238);
     padding: 2rem;
     border-radius: 25px;
@@ -374,6 +376,11 @@
   .product-gallery-price {
     font-size: 1.2rem;
     text-align: center;
+  }
+
+  /* Product */
+  .product-image {
+    width: 50%;
   }
 
   /* User page */
@@ -439,16 +446,33 @@
   }
 }
 
-/* ------- SMALL HEIGHT ---------- */
+/* SMALL HEIGHT */
 @media screen and (height < 800px) {
+  /* Heading 1 */
+  .background-image-container {
+    min-height: 100vh;
+    padding-bottom: 15rem;
+  }
+
+  .login-background-image {
+    background: none;
+  }
+}
+
+/* ------- SMALLER HEIGHT ---------- */
+@media screen and (height < 700px) {
   /* Heading 1 */
   .heading-1 {
     font-size: 3rem;
     margin-top: 2rem;
   }
 
-  /* Button */
+  /* Main description */
   .main-description {
     margin-bottom: 1rem;
+  }
+
+  .login-background-image {
+    background: none;
   }
 }
