@@ -83,7 +83,7 @@ if (!isset($_SESSION['username'])) {
         </nav>
         <!-- Main section -->
         <section class='container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center'>
-          <h2 class='heading-2 mb-1'>Your order has been sent.</h2>
+          <h2 class='heading-2 mb-1'>Your order no. $orderNumber has been sent.</h2>
           <p class='mt-0 text-sm-center text-lg-start'>Your order has been sent. You can see more informations in your profile
             page.</p>
           <a href='user.php' class='button mt-5'>Open user page</a>
