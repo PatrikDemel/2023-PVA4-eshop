@@ -57,7 +57,6 @@
   </nav>
   <!-- Products section -->
   <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
-    <!-- All products -->
     <h2 class="heading-2">Products</h2>
     <!-- Product gallery -->
     <div class="gallery d-flex gap-5 flex-wrap justify-content-center pb-5">

@@ -5,7 +5,7 @@ $message = '';
 // Connects to the database 
 include_once("db_setup.php");
 
-// Checks if the form is sent
+// Waits for form send
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     else if (strlen($first_name) > 30 || strlen($last_name) > 30 || strlen($email) > 255 || strlen($password) > 255) {
         $message = 'Error: Your inputs are invalid';
     } else {
+        // SQL execution
         $sql = "SELECT * FROM users WHERE username = '$username'";
         $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
@@ -34,12 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $sql = "INSERT INTO users VALUES ('$first_name', '$last_name', '$email', '$username', '$password')";
             $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-            // Starts the session
+            // Starts the session and saves main variables into it
             session_start();
             $_SESSION["username"] = $username;
             $_SESSION["password"] = $password;
 
-            // Redirects the user to the page
+            // Redirects the user to the user page
             header("Location: user.php");
 
         } else {
@@ -111,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </nav>
-    <!-- User login section -->
+    <!-- User Register section -->
     <section class="container">
         <h2 class="heading-2 text-center">Register user</h2>
         <div class="container mb-5">

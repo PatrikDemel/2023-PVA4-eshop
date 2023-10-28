@@ -3,6 +3,7 @@
 session_start();
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
+
 // Error message variable
 $message = '';
 
@@ -93,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
         </nav>
-        <!-- User login section -->
+        <!-- Change password section -->
         <section class="container">
             <h2 class="heading-2 text-center">Change password</h2>
             <div class="container ">

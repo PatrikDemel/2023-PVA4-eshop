@@ -54,6 +54,11 @@
   }
 }
 
+.cancel-cart-button {
+  color: #ff0000;
+  cursor: pointer;
+}
+
 /* ----------- Large screens ------------ */
 /* Navbar */
 @media screen and (width >= 992px) {

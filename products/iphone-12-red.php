@@ -38,6 +38,8 @@ $description = $row['description'];
     <title>iWave |
         <?php echo $name; ?>
     </title>
+    <!-- JS cart script -->
+    <script src="../js/addToCart.js"></script>
 </head>
 
 <body>
@@ -92,44 +94,7 @@ $description = $row['description'];
     </div>";
         ?>
     </section>
-    <script>
-        // Get the shopping cart object from local storage
-        const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart')) || {};
 
-        // Get the name and the price elements
-        const name = document.getElementById('name').textContent;
-        const price = parseFloat(document.getElementById('price').textContent.replace('$', ''));
-
-        function addToCart() {
-            // Check if the product exists in the shopping cart
-            if (shoppingCart.hasOwnProperty('iPhone12Red')) {
-                // If it exists, update the quantity
-                shoppingCart['iPhone12Red'].quantity++;
-
-                // Redirects user to the cart page
-                window.location.href = "../cart.php";
-            } else {
-                // If it doesn't exist, create a new entry
-                shoppingCart['iPhone12Red'] = {
-                    name: name,
-                    price: price,
-                    quantity: 1
-                };
-
-                // Redirects user to the cart page
-                window.location.href = "../cart.php";
-            }
-
-            // Save the updated shopping cart back to local storage
-            localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-        }
-
-        // Add to cart button variable
-        const addToCartButton = document.getElementById('add-button');
-
-        // Attach the addToCart function to the button's click event
-        addToCartButton.addEventListener('click', addToCart);
-    </script>
 
 </body>
 

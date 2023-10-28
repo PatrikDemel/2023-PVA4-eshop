@@ -1,6 +1,4 @@
 TODO:
 
-- product 
 - cart
-- responsivness
-- upload
+- final check

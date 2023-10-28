@@ -10,9 +10,11 @@ if (!isset($_SESSION['username'])) {
   //Connects to the database
   include_once("db_setup.php");
 
+  // Saves session variables
   $username = $_SESSION['username'];
   $password = $_SESSION['password'];
 
+  // SQL execution
   $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
@@ -82,7 +84,7 @@ if (!isset($_SESSION['username'])) {
   <!-- User section -->
   <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
     <h2 class="heading-2">User info</h2>
-    <!-- Usr info -->
+    <!-- User info -->
     <div class="container">
       <div class="col-lg-6 col-sm-12 flex-column">
         <div class="row user-row d-flex flex-row my-4">
@@ -121,6 +123,7 @@ if (!isset($_SESSION['username'])) {
     </div>
     <div class="container pb-5">
       <h2 class="heading-2">Ordered products</h2>
+      <!-- Ordered products -->
       <table class="table">
         <thead>
           <tr>
@@ -136,23 +139,18 @@ if (!isset($_SESSION['username'])) {
         </thead>
         <tbody>
           <?php
+          // SQL execution
           $sql = "SELECT * FROM products WHERE user_ordered = '$username'";
           $result = mysqli_query($conn, $sql);
 
+          // Saves user order data into variables
           while ($row = mysqli_fetch_array($result)) {
             $image = $row["image"];
             $name = $row["name"];
             $order_number = $row["order_number"];
             $order_status = $row["order_status"];
-
-            echo "dyk";
           }
           ?>
-          <tr>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
         </tbody>
       </table>
     </div>

@@ -20,6 +20,8 @@
     <!-- Title and Icon -->
     <link rel="icon" href="./assets/favicon.svg" />
     <title>iWave | Shopping cart</title>
+    <!-- JS cart script -->
+    <script src="./js/getCart.js"></script>
 </head>
 
 <body>
@@ -60,9 +62,28 @@
     </nav>
     <!-- Products section -->
     <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
-        <!-- All products -->
+        <!-- Cart section -->
         <h2 class="heading-2">Shopping cart</h2>
-
+        <table class="table" id="cart-table">
+            <thead>
+                <tr>
+                    <th scope="col"
+                        style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+                        Product name</th>
+                    <th scope="col"
+                        style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+                        Quantity</th>
+                    <th scope="col"
+                        style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+                        Price</th>
+                    <th scope="col"
+                        style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </section>
 </body>
 
