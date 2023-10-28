@@ -21,7 +21,7 @@ Seznam všech produktů v eshopu. U každého produktu je tlačítko odkazujíc�
 
 ## Product
 
-Uživatel bude zde přesměrován ve chvíli, kdy klikne na určitý produkt na stránce **products**. Zde má k dispozici danného produktu, popis, cenu, a tlačítko k přidání do košíku.
+Uživatel bude zde přesměrován ve chvíli, kdy klikne na určitý produkt na stránce **products**. Zde má k dispozici jméno danného produktu, popis, cenu, a tlačítko k přidání do košíku.
 
 ## Contact
 
