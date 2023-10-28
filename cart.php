@@ -93,6 +93,14 @@
             <a class="my-0 mx-5 text-white" href="checkout.php">Checkout</a>
         </div>
     </section>
+    <script>
+        // Prevents user from checkouting blank fields
+        if (document.getElementById('total') != null) {
+            localStorage.setItem('formSubmitted', 'false');
+        } else {
+            localStorage.setItem('formSubmitted', 'true');
+        }
+    </script>
 </body>
 
 </html>

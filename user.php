@@ -128,11 +128,9 @@ if (!isset($_SESSION['username'])) {
         <thead>
           <tr>
             <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
-              Product image</th>
-            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
-              Product name</th>
-            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
               Order number</th>
+            <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
+              Price</th>
             <th scope="col" style="background-color: var(--primary-color); color: var(--light-color); font-weight: 400">
               Order status</th>
           </tr>

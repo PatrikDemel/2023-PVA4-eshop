@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Shows the total sum in the table
       const totalElement = document.getElementById('total');
       totalElement.textContent = '$' + sum;
+
+      // Exports sum to for another files
+      localStorage.setItem('sum', sum);
     });
   }
 });
