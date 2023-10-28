@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderPriceField = document.getElementById(
       'checkout-order-price-input'
     );
+
     orderNumberField.value = orderNumber;
     orderStatusField.value = orderStatus;
     orderPriceField.value = orderPrice;

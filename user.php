@@ -137,16 +137,22 @@ if (!isset($_SESSION['username'])) {
         </thead>
         <tbody>
           <?php
-          // SQL execution
-          $sql = "SELECT * FROM products WHERE user_ordered = '$username'";
+          // Selects all products
+          $sql = "SELECT * FROM orders WHERE user_ordered = '$username'";
           $result = mysqli_query($conn, $sql);
 
-          // Saves user order data into variables
-          while ($row = mysqli_fetch_array($result)) {
-            $image = $row["image"];
-            $name = $row["name"];
-            $order_number = $row["order_number"];
-            $order_status = $row["order_status"];
+          if (mysqli_num_rows($result) > 0) {
+            // Prints product
+            while ($row = mysqli_fetch_array($result)) {
+              $order_number = $row["order_number"];
+              $order_price = $row["order_price"];
+              $order_status = $row["order_status"];
+              echo "<tr>
+              <td>$order_number</td>
+              <td>$$order_price</td>
+              <td>$order_status</td>
+            </tr>";
+            }
           }
           ?>
         </tbody>

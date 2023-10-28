@@ -18,7 +18,7 @@ if (!isset($_SESSION['username'])) {
     $userOrdered = $_SESSION['username'];
 
     // If there is any item in the cart
-    if ($orderPrice != '') {
+    if ($orderPrice) {
       // SQL execution
       $sql = "INSERT INTO orders VALUES (NULL, '$userOrdered', '$orderNumber', '$orderStatus', '$orderPrice')";
       $result = mysqli_query($conn, $sql);

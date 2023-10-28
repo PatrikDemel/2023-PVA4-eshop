@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Total variable
       const prices = document.querySelectorAll('.product-price');
 
-      // Sum all the items in the table
+      // Initialize the sum to 0
       let sum = 0;
 
       // Loop through the elements and add their values to the sum variable
@@ -67,12 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
         sum += number;
       });
 
+      // Round the sum to two decimal places
+      const roundednum = sum.toFixed(2);
+
       // Shows the total sum in the table
       const totalElement = document.getElementById('total');
-      totalElement.textContent = '$' + sum;
+      totalElement.textContent = '$' + roundednum;
 
-      // Exports sum to for another files
-      localStorage.setItem('sum', sum);
+      // Exports sum to another file
+      localStorage.setItem('sum', roundednum);
     });
   }
 });
