@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // If there is any item in the shopping cart
   if (shoppingCart.length > 0) {
-    shoppingCart.forEach((item) => {
+    shoppingCart.forEach((item, index) => {
       // Creates table row
       const tableRow = document.createElement('tr');
 
@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Creates Product Price cell
       const productPrice = document.createElement('td');
-      productPrice.textContent = '$' + item.price;
+      productPrice.textContent = '$' + item.price * item.quantity;
+      productPrice.classList.add('product-price');
 
       // Creates Product Delete cell
       const deleteButton = document.createElement('td');
@@ -41,8 +42,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Function after deleting the item from the cart
       deleteButton.addEventListener('click', () => {
-        console.log('works');
+        // Modifies shopping cart
+        shoppingCart.splice(index, 1);
+
+        // Update the local storage with the modified shopping cart
+        localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+
+        // Remove the table row from the HTML table
+        tbody.removeChild(tableRow);
+
+        // Reloads the page
+        location.reload();
       });
+
+      // Total variable
+      const prices = document.querySelectorAll('.product-price');
+
+      // Sum all the items in the table
+      let sum = 0;
+
+      // Loop through the elements and add their values to the sum variable
+      prices.forEach((element) => {
+        const number = parseFloat(element.textContent.replace('$', ''));
+        sum += number;
+      });
+
+      // Shows the total sum in the table
+      const totalElement = document.getElementById('total');
+      totalElement.textContent = '$' + sum;
     });
   }
 });

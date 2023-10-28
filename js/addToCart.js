@@ -30,5 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update localStorage with the updated shoppingCart
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+
+    // Locates user to the cart page
+    window.location.href = '../cart.php';
   });
 });

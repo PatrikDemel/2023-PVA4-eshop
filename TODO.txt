@@ -1,5 +1,5 @@
 TODO:
 
-- cart
-- cart quantity icon
+
+- thanks page
 - final check

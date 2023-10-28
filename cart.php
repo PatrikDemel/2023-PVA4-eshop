@@ -84,6 +84,14 @@
             <tbody>
             </tbody>
         </table>
+        <div class="d-flex justify-content-between ps-2 py-2 w-100"
+            style="background-color: var(--primary-color);color: var(--light-color);">
+            <div class="d-flex">
+                <p class="my-0 pe-3">Total</p>
+                <p class="my-0" id="total"></p>
+            </div>
+            <a class="my-0 mx-5 text-white" href="checkout.php">Checkout</a>
+        </div>
     </section>
 </body>
 
