@@ -29,7 +29,7 @@ Stránka, kde může uživatel kontaktovat brand. Formulář je ošetřen před 
 
 ## User
 
-Informace o uživateli - jako je _jméno a příjmení_, _email_, nebo _uživatelské jméno_. Uživatel bude mít možnost si změnit heslo nebo se odhlásit, zároveň bude mít k dispozici seznam všech produktů, které si kdy na eshopu objednal. Pokud není uživatel přihlášený na web, bude automaticky přesměrovaný na stránku **user login**.
+Informace o uživateli - jako je _jméno a příjmení_, _email_, nebo _uživatelské jméno_. Uživatel bude mít možnost si změnit heslo nebo se odhlásit, zároveň bude mít k dispozici seznam objednávek, které kdy na eshopu udělal. Pokud není uživatel přihlášený na web, bude automaticky přesměrovaný na stránku **user login**.
 
 ## User login
 
