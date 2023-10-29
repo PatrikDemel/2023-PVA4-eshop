@@ -1,4 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Gets shopping cart, or creates if does not exist
+  // Gets shopping cart, or creates if it does not exist
   const shoppingCart = localStorage.getItem('shoppingCart') || [];
 });

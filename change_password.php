@@ -58,19 +58,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <!-- Background image -->
     <div class="login-background-image">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-white">
             <div class="container pt-2">
+                <!-- Navbar logo -->
                 <a class="navbar-brand" href="index.html"><img src="./assets/logo.png" alt="logo" class="w-75" /></a>
+                <!-- Navbar toggle -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav">
                     <i class="navbar-toggler-icon"></i>
                 </button>
-
                 <div class="offcanvas offcanvas-end" id="nav">
                     <div class="offcanvas-header justify-content-end">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
+                    <!-- Navbar items -->
                     <div class="offcanvas-body">
                         <ul
                             class="navbar-nav d-lg-flex justify-content-lg-end w-100 me-auto mb-2 mb-lg-0 align-items-center">
@@ -114,7 +117,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="submit" class="button login-button mt-2" value="Change password">
                 </form>
             </div>
-
         </section>
     </div>
 </body>

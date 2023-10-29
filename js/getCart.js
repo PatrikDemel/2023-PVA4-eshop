@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Gets shoppingCart from local storage
   const shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+
   // Gets tbody from HTML document
   const tbody = document.querySelector('#cart-table tbody');
 

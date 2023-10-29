@@ -102,7 +102,7 @@ if (!isset($_SESSION['username'])) {
 
 
 <script src="./js/checkout.js"></script>
-
+<!-- Submit form -->
 <form action='checkout.php' method='post' id='checkout-form'>
   <input type='hidden' name='order_number' id='checkout-order-number-input'>
   <input type='hidden' name='order_status' id='checkout-order-status-input'>

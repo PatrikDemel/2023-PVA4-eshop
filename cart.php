@@ -28,15 +28,17 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white">
         <div class="container pt-2">
+            <!-- Navbar logo -->
             <a class="navbar-brand" href="index.html"><img src="./assets/logo.png" alt="logo" class="w-75" /></a>
+            <!-- Navbar toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav">
                 <i class="navbar-toggler-icon"></i>
             </button>
-
             <div class="offcanvas offcanvas-end" id="nav">
                 <div class="offcanvas-header justify-content-end">
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
+                <!-- Navbar items -->
                 <div class="offcanvas-body">
                     <ul
                         class="navbar-nav d-lg-flex justify-content-lg-end w-100 me-auto mb-2 mb-lg-0 align-items-center">
@@ -60,9 +62,9 @@
             </div>
         </div>
     </nav>
-    <!-- Products section -->
+    <!-- Cart section -->
     <section class="container d-lg-block d-sm-flex flex-sm-column align-items-center-exsm align-items-sm-center">
-        <!-- Cart section -->
+        <!-- Cart -->
         <h2 class="heading-2">Shopping cart</h2>
         <table class="table" id="cart-table">
             <thead>
@@ -84,6 +86,7 @@
             <tbody>
             </tbody>
         </table>
+        <!-- Total row -->
         <div class="d-flex justify-content-between ps-2 py-2 w-100"
             style="background-color: var(--primary-color);color: var(--light-color);">
             <div class="d-flex">

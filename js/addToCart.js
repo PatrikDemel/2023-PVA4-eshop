@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         price: itemPrice,
         quantity: 1,
       };
+      // Saves item into shopping cart
       shoppingCart.push(item);
     }
 

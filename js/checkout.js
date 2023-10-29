@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form variable
     const submitForm = document.getElementById('checkout-form');
 
-    // Fills form with order details
+    // Gets form fields
     const orderNumberField = document.getElementById(
       'checkout-order-number-input'
     );
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'checkout-order-price-input'
     );
 
+    // Fills the form fields with data
     orderNumberField.value = orderNumber;
     orderStatusField.value = orderStatus;
     orderPriceField.value = orderPrice;
